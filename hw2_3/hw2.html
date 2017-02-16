@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Handcoded HTML Static Site </title>
+        <style>
+            h1{
+                font-family: Verdana;
+                text-align: center;
+            }
+            h2{
+                font-family: sans-serif;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            .secret {
+                 display: none;
+            }
+            a{
+                text-align: center;
+            }
+            td :first-of-type{
+                background-color: blue;
+            }
+            table{
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+
+            table th{
+                border: 1px solid black;
+                text-align: center;
+                font-size: 30px;
+                font-family: cursive;
+            }
+            table td{
+                border: 1px solid black;
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            table tr td:nth-child(1) {
+                background: #ccc;
+            }
+            
+            img{
+                vertical-align: middle; 
+                
+            }
+            pre{
+                border: 0px solid black;
+                text-align: left;
+                font-size: 15px;
+                font-weight: normal;
+            }
+            div {
+                background-image: url("https://static01.nyt.com/images/2016/08/10/science/10tb-dogsperm01/10tb-dogsperm01-superJumbo.jpg");
+                background-size: 100%;
+
+            }
+            .sticker {
+                width:200px;
+                height:147px;
+                background: center;
+                background-size: 100%;
+                background-image: url("https://img.clipartfest.com/d465d258975804d90b979daff6fa9a23_dog-no-background-clipart-1-cute-dog-clipart-transparent-background_958-704.png");
+            
+
+            }
+            .sticker:hover { 
+                
+                animation-name: spinner;
+                animation:rotate(360deg);
+                animation-duration: 2s;
+                outline: dotted red; 
+            }
+            :link:hover{
+                outline: dotted;
+            }
+            :visited { 
+                color: white; 
+                
+            }
+            @keyframes spinner{
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div>
+        <h1>CS2610 Assignment Handcoded HTML Static Site <img src="smileyface.gif" alt=":)"></h1>
+        
+        <h2>By <span><a href = "https://www.linkedin.com/in/natalie-nix-512717a7">Natalie Nix</a></span></h2>
+        <p>Unix shell command cheat sheet</p>
+        <p><a href = "https://usu.instructure.com/courses/443436/assignments/2200253#submit" >Assignment Description</a></p>
+        <div class="sticker" ></div>
+        <table>
+
+            <tr>
+                <th>Unix Shell Command Name</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>ls<p class="secret"> Invisible text</p></td>
+                <td style = "font-weight: normal;font-size: 15px;">lists files</td>
+                <td><pre>$ ls</pre>
+                <pre>hw2.html</pre>
+                <pre>README.md</pre></td>
+            </tr>
+            <tr>
+                <td>tree</td>
+                <td style = "font-weight: normal;font-size: 15px;">shows begining of directory</td>
+                <td><pre>$ tree</pre>
+                <pre>.</pre>
+                <pre>|-- config.dat</pre>
+                <pre>|-- data</pre>
+                <pre>|   |-- data1.bin</pre>
+                <pre>|   |-- data2.sql</pre>
+                <pre>|   |-- data3.inf</pre>
+                <pre>|-- images</pre>
+                <pre>|   |-- background.jpg</pre>
+                <pre>|   |-- icon.gif</pre>
+                <pre>|   |-- logo.jpg</pre>
+                <pre>|-- program.exe</pre>
+                <pre>|-- readme.txt</pre></td>
+            </tr>
+            <tr>
+                <td>file</td>
+                <td style = "font-weight: normal;font-size: 15px;">tells what kind of file it is</td>
+                <td><pre>$ file file.c</pre>
+                    <pre>file.c: C program text</pre></td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td style = "font-weight: normal;font-size: 15px;">what type of command</td>
+                <td><pre>$ type test</pre>
+                    <pre>test is a shell builtin</pre></td>
+            </tr>
+            <tr>
+                <td>apropos</td>
+                <td style = "font-weight: normal;font-size: 15px;">used to search man page files - like a mini google</td>
+                <td><pre>$ apropos mount</pre>
+                <pre>free (1)- Display amount of free and used memory in the system</pre>
+                <pre>mklost+found (8)- create a lost+found directory on a mounted Linux second extended file system</pre>
+                <pre>mount (8)- mount a file system</pre>
+                <pre>mountpoint (1)- see if a directory is a mountpoint</pre>
+                <pre>ntfsmount (8)- Read/Write userspace NTFS driver.</pre>
+                <pre>sleep (1)- delay for a specified amount of time</pre>
+                <pre>switch_root (8)- switch to another filesystem as the root of the mount tree.</pre>
+                <pre>umount (8)- unmount file systems</pre></td>
+            </tr>
+            <tr>
+                <td>pwd</td>
+                <td style = "font-weight: normal;font-size: 15px;">prints working directory</td>
+                <td><pre>$ pwd</pre>
+                <pre>/usr/local/bin</pre></td>
+            </tr>
+            <tr>
+                <td>cd</td>
+                <td style = "font-weight: normal;font-size: 15px;">changes directory</td>
+                <td><pre>$ cd games</pre>
+                <pre>usr:~/games$</pre></td>
+            </tr>
+            <tr>
+                <td>mkdir</td>
+                <td style = "font-weight: normal;font-size: 15px;">makes an empty directory</td>
+                <td><pre>$ mkdir -p /tmp/a/b/c</pre></td>
+            </tr>
+            <tr>
+                <td>echo</td>
+                <td style = "font-weight: normal;font-size: 15px;">turns list of arguments to text</td>
+                <td><pre>$ echo Hello world</pre>
+                <pre>Hello world</pre></td>
+            </tr>
+            <tr>
+                <td>cat</td>
+                <td style = "font-weight: normal;font-size: 15px;">appends one thing to another</td>
+                <td><pre>$ cat file1.txt file2.txt > newcombinedfile.txt </pre></td>
+            </tr>
+            <tr>
+                <td>less</td>
+                <td style = "font-weight: normal;font-size: 15px;">puts you into a different place where you can view everything on one screen</td>
+                <td><pre>$ less -M readme.txt</pre></td>
+            </tr>
+        </table>
+        </div>
+        <script type="text/javascript">
+            function addLink() {
+                var selection = window.getSelection(),
+                    addedtext = '<br /><br /> Thanks for copying text from my website!',
+                    copytext = selection + addedtext,
+                    newdiv = document.createElement('div');
+                    newdiv.style.position = 'absolute';
+                    newdiv.style.left = '-99999px';
+                    document.body.appendChild(newdiv);
+                    newdiv.innerHTML = copytext;
+                    selection.selectAllChildren(newdiv);
+                    window.setTimeout(function() {
+                    document.body.removeChild(newdiv);
+                }, 100);
+            }
+            document.addEventListener('copy', addLink);
+        </script>
+    </body>
+</html>
